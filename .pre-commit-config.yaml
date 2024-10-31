@@ -1,0 +1,24 @@
+repos:
+  - repo: local
+    hooks:
+      - id: check-commit-message
+        name: "Check Commit Message"
+        entry: ./commit_message_checker.sh
+        language: script
+        stages: [commit-msg]
+
+  - repo: git@github.com:psf/black.git
+    rev: 23.1.0
+    hooks:
+      - id: black
+
+  - repo: git@github.com:PyCQA/flake8.git
+    rev: 6.0.0
+    hooks:
+      - id: flake8
+
+  - repo: git@github.com:pre-commit/pre-commit-hooks.git
+    rev: v4.0.1
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace

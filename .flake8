@@ -1,0 +1,40 @@
+[flake8]
+max-line-length = 88
+
+
+exclude =
+    .git,
+    __pycache__,
+    venv,
+    build,
+    dist
+
+ignore =
+    # E203: Whitespace before ':' (conflicts with Black)
+    E203,
+    # W503: Line break before binary operator (also conflicts with Black)
+    W503,
+    # F841: Local variable assigned but never used
+    F841,
+    # F812: list comprehension redefines ...
+    F812,
+    # H101: Use TODO(NAME)
+    H101,
+    # H202: assertRaises Exception too broad
+    H202,
+    # H233: Python 3.x incompatible use of print operator
+    H233,
+    # H301: one import per line
+    H301,
+    # H306: imports not in alphabetical order (time, os)
+    H306,
+    # H401: docstring should not start with a space
+    H401,
+    # H403: multi line docstrings should end on a new line
+    H403,
+    # H404: multi line docstring should start without a leading new line
+    H404,
+    # H405: multi line docstring summary not separated with an empty line
+    H405,
+    # H501: Do not use self.__dict__ for string formatting
+    H501
